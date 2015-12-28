@@ -11,11 +11,23 @@
 }
 
 .flip-container {
+    -ms-perspective: 1000;
     perspective: 1000;
+    -ms-transform: perspective(1000px);
     margin: 10px;
 }
 
-.flip-container.flip .flipper {
+/*.flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}*/
+
+.flip-container.flip .back {
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container.flip .front {
+    -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
